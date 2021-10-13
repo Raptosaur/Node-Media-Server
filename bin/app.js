@@ -12,8 +12,9 @@ let argv = require("minimist")(process.argv.slice(2), {
   default: {
     rtmp_port: 1935,
     http_port: 8000,
-    secret: (Math.random() + 1).toString(36).substring(2),
-    api_password: "admin",
+    secret:
+      process.env.SECRET_KEY ?? (Math.random() + 1).toString(36).substring(2),
+    api_password: process.env.API_PASSWORD ?? "admin",
   },
 });
 
