@@ -46,7 +46,7 @@ const config = {
     api_user: "admin",
     api_pass: argv.api_password,
     play: false,
-    publish: false,
+    publish: true,
     secret: argv.secret,
   },
 };
