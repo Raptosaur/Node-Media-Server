@@ -51,6 +51,8 @@ const config = {
   },
 };
 
+console.log("environment", process.env);
+
 let nms = new NodeMediaServer(config);
 nms.run();
 
