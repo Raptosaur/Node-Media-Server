@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const NodeMediaServer = require("..");
+
 let argv = require("minimist")(process.argv.slice(2), {
   string: ["rtmp_port", "http_port", "secret", "api_password"],
   alias: {
@@ -61,8 +62,6 @@ nms.on("preConnect", (id, args) => {
     "[NodeEvent on preConnect]",
     `id=${id} args=${JSON.stringify(args)}`
   );
-  // let session = nms.getSession(id);
-  // session.reject();
 });
 
 nms.on("postConnect", (id, args) => {
